@@ -22,7 +22,14 @@
             v-model="variant"
             :items="items"
             clearable
-            label="Filter"
+            label="Filter by country"
+        ></v-select>
+
+        <v-select
+            v-model="variant"
+            :items="items"
+            clearable
+            label="Filter by score"
         ></v-select>
       </v-col>
 
@@ -76,9 +83,10 @@
 
     data: () => ({
       items: [
-        'email',
-        'name',
-        'birthday',
+        'russia',
+        'usa',
+        '> 20',
+        '< 10',
       ],
       variant: 'default',
       users: [
